@@ -5,12 +5,4 @@ console.log(`
 EMPLOYEE TRACKER
 ================
 `)
-
-const runTracker = ()=> {
-  //while (new Tracker().startTracker()) {
-  //  continue;
-  //}
-  console.log(new Tracker().startTracker());
-}
-
-runTracker();
+new Tracker().startTracker()
