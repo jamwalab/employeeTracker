@@ -1,5 +1,0 @@
-SELECT e1.*, roles.title AS role, department.name AS department, concat(e2.first_name,' ',e2.last_name) AS Manager
-    -> FROM employee e1
-    -> LEFT JOIN roles ON e1.role_id = roles.id
-    -> LEFT JOIN department ON roles.department_id = department.id
-    -> LEFT JOIN employee e2 ON e1.manager_id = e2.id;
