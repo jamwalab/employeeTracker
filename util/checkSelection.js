@@ -4,14 +4,20 @@ const checkSelection = (data) => {
   return new Promise (res => {
     switch(data.startMenuOptions) {
       case 'View all Employees':
-        res(new Employee().viewAllEmployee())
+        res(new Employee().viewAllEmployee());
         break;
       case 'View employees by manager':
-        res(new Employee().viewByManager())
-        break;   
+        res(new Employee().viewByManager());
+        break;
+      case 'View employees by department':
+        res(new Employee().viewByDepartment());
+        break;
+      case 'Add an Employee':
+        res(new Employee().addEmployee());
+        break; 
       default:
         console.log(data);
-        res(data.startMenuOptions)
+        res(data.startMenuOptions);
         break;
     }
     //res(data.startMenuOptions);
