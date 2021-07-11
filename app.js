@@ -1,8 +1,10 @@
-const Tracker = require('./lib/Tracker');
+const {menuSelector, startApp} = require('./lib/Tracker');
+//const initializeApp = require('./util/initialize')
 
 console.log(`
 ================
 EMPLOYEE TRACKER
 ================
 `)
-new Tracker().startTracker()
+
+startApp();
