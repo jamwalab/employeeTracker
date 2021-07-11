@@ -11,7 +11,7 @@ const getList = listOf => {
           console.log(err);
         }
         res(JSON.parse(JSON.stringify(rows)));
-      })
+      });
     }
     else if (listOf === 'department') {
       const department = `SELECT * FROM department;`;
@@ -20,7 +20,18 @@ const getList = listOf => {
           console.log(err);
         }
         res(JSON.parse(JSON.stringify(rows)));
-      })
+      });
+    }
+    else if (listOf === 'roles') {
+      const roles = `SELECT roles.id, concat(roles.title,', ',department.name) AS Title
+      FROM roles
+      INNER JOIN department ON department_id = department.id;`;
+      db.query(roles, (err, rows) => {
+        if (err) {
+          console.log(err);
+        }
+        res(JSON.parse(JSON.stringify(rows)));
+      });
     }
 
   })
