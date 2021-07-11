@@ -15,6 +15,9 @@ const checkSelection = (data) => {
       case 'Add an Employee':
         res(new Employee().addEmployee());
         break; 
+      case 'Update an Employee Role':
+        res(new Employee().updateEmployeeRole());
+        break;
       default:
         console.log(data);
         res(data.startMenuOptions);
