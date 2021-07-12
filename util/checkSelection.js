@@ -23,6 +23,9 @@ const checkSelection = (data) => {
       case 'Add an Employee':
         res(new Employee().addEmployee());
         break; 
+      case 'Add a Role':
+        res(new Roles().addRole());
+        break; 
       case 'Add a Department':
         res(new Department().addDepartment());
         break;
