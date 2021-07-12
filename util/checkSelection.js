@@ -1,4 +1,6 @@
 const Employee = require('../lib/Employee');
+const Roles = require('../lib/Roles');
+const Department = require('../lib/Department');
 
 const checkSelection = (data) => {
   return new Promise (res => {
@@ -12,11 +14,20 @@ const checkSelection = (data) => {
       case 'View employees by department':
         res(new Employee().viewByDepartment());
         break;
+      case 'View all Roles':
+        res(new Roles().allRoles());
+        break;
+      case 'View all Departments':
+        res(new Department().allDepartments());
+        break;
       case 'Add an Employee':
         res(new Employee().addEmployee());
         break; 
       case 'Update an Employee Role':
         res(new Employee().updateEmployeeRole());
+        break;
+      case 'Update employee manager':
+        res(new Employee().updateEmployeeManager());
         break;
       default:
         console.log(data);
