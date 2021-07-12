@@ -30,6 +30,7 @@ Testing is not available at the moment.
 
 ## Usage
 * When started, you will get a menu screen as shown below
+
 ![Menu Page](./assets/img/startMenu.PNG)
 * You will have following options to choose from -
   * View all Employees
